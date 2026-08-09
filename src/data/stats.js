@@ -2,21 +2,21 @@ export const statsData = [
   {
     value: "3+",
     label: "Years Experience",
-    description: "Building production mobile apps"
+    description: "React Native Mobile Development"
   },
   {
-    value: "5+",
-    label: "Real-World Projects",
-    description: "Deployed to App Store & Google Play"
+    value: "5",
+    label: "Key Projects / Domains",
+    description: "Booking, Healthcare, Wellness, Environmental & Real-Time"
   },
   {
     value: "iOS + Android",
-    label: "Cross-Platform",
-    description: "Native APIs & Hermes runtime"
+    label: "Cross-Platform Development",
+    description: "Production mobile apps"
   },
   {
-    value: "WebRTC",
-    label: "Real-Time Comms",
-    description: "Video/audio & Mediasoup integration"
+    value: "WebRTC + Mediasoup",
+    label: "Real-Time Communication",
+    description: "Video & audio calling functionality"
   }
 ];

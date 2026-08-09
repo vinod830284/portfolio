@@ -7,9 +7,9 @@ import { socialLinks } from '../../data/socialLinks';
 export function Hero() {
   const metadataBadges = [
     { text: '3+ Years Experience', icon: ShieldCheck },
-    { text: 'React Native Expert', icon: Smartphone },
-    { text: 'iOS & Android Parity', icon: Cpu },
-    { text: 'Open to Opportunities', icon: CheckCircle2, highlight: true },
+    { text: 'React Native', icon: Smartphone },
+    { text: 'iOS & Android', icon: Cpu },
+    { text: 'WebRTC', icon: CheckCircle2, highlight: true },
   ];
 
   return (
@@ -36,12 +36,12 @@ export function Hero() {
             {/* Main Hero Heading */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-[#F5F7FA] leading-[1.15]">
               Building reliable mobile experiences with{' '}
-              <span className="gradient-text">React Native</span>
+              <span className="gradient-text">React Native.</span>
             </h1>
 
             {/* Supporting Text */}
             <p className="text-base sm:text-lg text-slate-600 dark:text-[#A5ACB8] leading-relaxed max-w-2xl">
-              React Native Developer with <strong>3+ years of experience</strong> building and maintaining production-ready applications for iOS and Android across booking, wellness, healthcare, environmental reporting, and real-time communication domains.
+              React Native Developer with 3+ years of experience building and maintaining production-ready applications for iOS and Android. Experienced in APIs, state management, native integrations, performance optimization, and real-time communication.
             </p>
 
             {/* CTAs */}

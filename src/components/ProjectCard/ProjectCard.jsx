@@ -3,14 +3,27 @@ import { Button } from '../Button/Button';
 
 export function ProjectCard({ project, onOpenDetails }) {
   return (
-    <div className="group relative flex flex-col justify-between rounded-2xl bg-white dark:bg-[#11151A] border border-slate-200 dark:border-white/10 p-6 sm:p-7 transition-all duration-300 hover:border-accent-blue/40 hover:shadow-glow-blue hover:-translate-y-1">
+    <div
+      className={`group relative flex flex-col justify-between rounded-2xl p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 ${
+        project.featured
+          ? 'bg-gradient-to-b from-accent-blue/5 to-transparent dark:from-accent-blue/10 dark:to-transparent bg-white dark:bg-[#11151A] border-2 border-accent-blue/40 shadow-glow-blue'
+          : 'bg-white dark:bg-[#11151A] border border-slate-200 dark:border-white/10 hover:border-accent-blue/40 hover:shadow-glow-blue'
+      }`}
+    >
       {/* Top Header & Tag */}
       <div>
-        <div className="flex items-center justify-between gap-2 mb-4">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium bg-accent-violet/10 text-accent-violet border border-accent-violet/20">
-            <Smartphone className="w-3.5 h-3.5" />
-            {project.domain}
-          </span>
+        <div className="flex items-center justify-between gap-2 mb-4 flex-wrap">
+          <div className="flex items-center gap-2">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium bg-accent-violet/10 text-accent-violet border border-accent-violet/20">
+              <Smartphone className="w-3.5 h-3.5" />
+              {project.domain}
+            </span>
+            {project.featured && (
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-semibold bg-accent-blue/15 text-accent-blue border border-accent-blue/30">
+                Key Technical Specialization
+              </span>
+            )}
+          </div>
           <span className="text-xs font-mono text-slate-500 dark:text-[#6F7785]">{project.role}</span>
         </div>
 

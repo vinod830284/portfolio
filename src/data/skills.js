@@ -1,7 +1,7 @@
 export const skillsData = [
   {
     category: "Languages",
-    skills: ["JavaScript", "TypeScript"]
+    skills: ["JavaScript (ES6+)", "TypeScript"]
   },
   {
     category: "Mobile Development",
@@ -16,7 +16,7 @@ export const skillsData = [
     skills: ["React Navigation", "React Native Reanimated"]
   },
   {
-    category: "Networking",
+    category: "Networking & APIs",
     skills: ["REST APIs", "Axios", "Fetch API"]
   },
   {
@@ -37,11 +37,22 @@ export const skillsData = [
   },
   {
     category: "Performance & Runtime",
-    skills: ["Hermes Engine", "Render Optimization", "Memory Profiling"]
+    skills: ["Hermes"]
   },
   {
     category: "Build & Release",
-    skills: ["Xcode", "Android Studio", "Gradle", "Firebase App Distribution", "Firebase Crashlytics", "TestFlight", "Google Play Console", "App Store Connect", "Apple Developer Console", "R8 / ProGuard"]
+    skills: [
+      "Xcode",
+      "Android Studio",
+      "Gradle",
+      "Firebase App Distribution",
+      "Firebase Crashlytics",
+      "TestFlight",
+      "Google Play Console",
+      "App Store Connect",
+      "Apple Developer Console",
+      "R8 / ProGuard"
+    ]
   },
   {
     category: "Development & Collaboration",

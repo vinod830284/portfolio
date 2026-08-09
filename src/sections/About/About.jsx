@@ -58,16 +58,16 @@ export function About() {
               Professional Overview
             </div>
             <h3 className="text-2xl font-bold text-slate-900 dark:text-[#F5F7FA]">
-              Vinod Kumar — React Native Engineer
+              Vinod Kumar — React Native Developer
             </h3>
             <p className="text-sm sm:text-base text-slate-600 dark:text-[#A5ACB8] leading-relaxed">
-              With <strong>3+ years of professional hands-on experience</strong> in mobile development, I specialize in crafting cross-platform applications for iOS and Android using React Native, Redux Toolkit, and native mobile bridges.
+              React Native Developer with <strong>3+ years of experience</strong> building and maintaining cross-platform mobile applications for iOS and Android.
             </p>
             <p className="text-sm sm:text-base text-slate-600 dark:text-[#A5ACB8] leading-relaxed">
-              My engineering journey spans developing scalable applications across diverse verticals—including parking booking platforms, mental health & wellness apps, environmental reporting tools, and low-latency real-time video streaming solutions using WebRTC and Mediasoup.
+              Experienced in developing production-ready features using React Native, TypeScript, JavaScript, state management, REST APIs, real-time communication (WebRTC + Mediasoup), and native mobile integrations.
             </p>
             <p className="text-sm sm:text-base text-slate-600 dark:text-[#A5ACB8] leading-relaxed">
-              I thrive on solving complex technical challenges: optimizing rendering lifecycles, establishing seamless API communications, integrating device hardware capabilities, and delivering polished, production-ready apps to millions of end users.
+              Hands-on experience across booking, healthcare, wellness, environmental reporting, and real-time communication applications, collaborating closely with cross-functional teams in Agile environments.
             </p>
           </motion.div>
 

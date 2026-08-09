@@ -7,11 +7,11 @@ export const experienceData = [
     type: "Full-Time",
     responsibilities: [
       "Develop and maintain cross-platform React Native applications for iOS and Android.",
-      "Integrate REST APIs and implement scalable state management using Redux Toolkit.",
-      "Develop real-time communication features using WebRTC and Mediasoup.",
-      "Integrate native mobile capabilities (Camera, Speaker, Screen Sharing, Push Notifications, Deep Links).",
-      "Optimize application performance (Hermes engine, render optimizations) and resolve production issues.",
-      "Collaborate with cross-functional teams throughout development, testing, debugging, and release cycles."
+      "Integrate REST APIs and implement state management using Redux Toolkit.",
+      "Develop real-time communication features using WebRTC.",
+      "Integrate native mobile capabilities.",
+      "Optimize application performance, investigate production issues, and implement fixes.",
+      "Collaborate with cross-functional teams throughout development, testing, debugging, and application release cycles."
     ],
     technologies: ["React Native", "TypeScript", "Redux Toolkit", "WebRTC", "Mediasoup", "iOS", "Android", "REST APIs"]
   },
@@ -23,8 +23,8 @@ export const experienceData = [
     type: "Internship",
     responsibilities: [
       "Developed responsive mobile screens and reusable React Native components.",
-      "Integrated REST APIs and contributed to core feature development.",
-      "Participated in active debugging, automated testing, and code reviews.",
+      "Integrated REST APIs and contributed to feature development.",
+      "Participated in debugging, testing, and code reviews.",
       "Worked closely with senior developers in Agile development sprints."
     ],
     technologies: ["React Native", "JavaScript", "React Navigation", "AsyncStorage", "Axios", "Git"]

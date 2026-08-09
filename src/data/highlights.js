@@ -1,32 +1,32 @@
 export const highlightsData = [
   {
     icon: "Smartphone",
-    title: "Cross-Platform Apps",
-    description: "Production-ready iOS and Android applications built with React Native and native module integration."
+    title: "Cross-Platform Development",
+    description: "React Native applications for iOS and Android."
   },
   {
     icon: "Video",
     title: "Real-Time Communication",
-    description: "Low-latency audio/video streaming and peer connection workflows using WebRTC and Mediasoup."
+    description: "WebRTC and Mediasoup based real-time video/audio functionality."
   },
   {
     icon: "Globe",
-    title: "API-Driven Applications",
-    description: "Scalable REST API integration, robust error handling, offline caching, and data-driven mobile experiences."
+    title: "API Integration",
+    description: "REST APIs using Axios and Fetch API."
   },
   {
-    icon: "Zap",
-    title: "Performance & Runtime",
-    description: "Hermes engine optimization, render tuning, memory leak profiling, and production stability."
+    icon: "Layers",
+    title: "State Management",
+    description: "Redux Toolkit, Zustand, Context API, and Redux Persist."
   },
   {
     icon: "Cpu",
     title: "Native Integration",
-    description: "Deep device capabilities integration including Camera, Microphone, Speaker routing, Screen Sharing, and Push Notifications."
+    description: "Camera, microphone, speaker, screen sharing, push notifications, and deep linking."
   },
   {
     icon: "Rocket",
-    title: "Release & Deployment",
-    description: "End-to-end deployment workflows with App Store Connect, Google Play Console, TestFlight, and Firebase Distribution."
+    title: "Performance & Release",
+    description: "Hermes, application performance optimization, debugging, Xcode, Android Studio, Gradle, R8/ProGuard, and release tooling."
   }
 ];
