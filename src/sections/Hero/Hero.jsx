@@ -35,7 +35,7 @@ export function Hero() {
 
             {/* Main Hero Heading */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-[#F5F7FA] leading-[1.15]">
-              Building reliable with{' '}
+              Building reliable mobile experiences with{' '}
               <span className="gradient-text">React Native.</span>
             </h1>
 
