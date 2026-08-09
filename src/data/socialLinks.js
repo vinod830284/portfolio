@@ -6,5 +6,5 @@ export const socialLinks = {
   location: "Kurukshetra, Haryana, India",
   linkedin: "https://www.linkedin.com/in/vinodkumar830284",
   github: "https://github.com/vinod830284",
-  resumePath: "/Vinod_Kumar_React_Native_Developer_Resume.pdf"
+  resumePath: `${import.meta.env.BASE_URL}Vinod_Kumar_React_Native_Developer_Resume.pdf`
 };
