@@ -13,11 +13,11 @@ export function SectionTitle({ badge, title, subtitle, alignment = 'center', cla
           {badge}
         </div>
       )}
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-content-primaryDark dark:text-content-primaryDark light:text-slate-900">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-[#F5F7FA]">
         {title}
       </h2>
       {subtitle && (
-        <p className="mt-4 max-w-2xl text-base sm:text-lg text-content-secondaryDark dark:text-content-secondaryDark light:text-slate-600">
+        <p className="mt-4 max-w-2xl text-base sm:text-lg text-slate-600 dark:text-[#A5ACB8]">
           {subtitle}
         </p>
       )}

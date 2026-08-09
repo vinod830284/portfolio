@@ -4,7 +4,7 @@ import { philosophyData } from '../../data/philosophy';
 
 export function Philosophy() {
   return (
-    <section className="py-16 md:py-24 relative bg-surface-dark/40 dark:bg-surface-dark/40 light:bg-slate-50/60">
+    <section className="py-16 md:py-24 relative bg-slate-100/50 dark:bg-[#11151A]/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
           badge="ENGINEERING MINDSET"
@@ -20,16 +20,16 @@ export function Philosophy() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.08 }}
-              className="p-6 rounded-2xl glass-panel border border-border-dark dark:border-border-dark light:border-slate-200 hover:border-accent-blue/40 transition-all flex flex-col justify-between"
+              className="p-6 rounded-2xl glass-panel border border-slate-200 dark:border-white/10 hover:border-accent-blue/40 transition-all flex flex-col justify-between"
             >
               <div>
-                <span className="text-2xl font-extrabold font-mono text-accent-blue/40 font-mono">
+                <span className="text-2xl font-extrabold font-mono text-accent-blue/50">
                   {item.number}
                 </span>
-                <h3 className="text-lg font-bold text-content-primaryDark dark:text-content-primaryDark light:text-slate-900 mt-2">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-[#F5F7FA] mt-2">
                   {item.title}
                 </h3>
-                <p className="mt-2 text-xs sm:text-sm text-content-secondaryDark dark:text-content-secondaryDark light:text-slate-600 leading-relaxed">
+                <p className="mt-2 text-xs sm:text-sm text-slate-600 dark:text-[#A5ACB8] leading-relaxed">
                   {item.description}
                 </p>
               </div>

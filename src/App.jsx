@@ -15,7 +15,7 @@ export function App() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className="min-h-screen flex flex-col bg-bg-dark dark:bg-bg-dark light:bg-bg-light text-content-primaryDark dark:text-content-primaryDark light:text-content-primaryLight selection:bg-accent-blue selection:text-white transition-colors duration-300">
+    <div className="min-h-screen flex flex-col bg-[#F8FAFC] dark:bg-[#0B0D10] text-slate-900 dark:text-[#F5F7FA] selection:bg-accent-blue selection:text-white transition-colors duration-300">
       {/* Sticky Header Navigation */}
       <Navbar theme={theme} toggleTheme={toggleTheme} />
 

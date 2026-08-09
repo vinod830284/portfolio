@@ -52,21 +52,21 @@ export function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="lg:col-span-6 glass-panel rounded-2xl p-6 sm:p-8 border border-border-dark dark:border-border-dark light:border-slate-200 shadow-xl space-y-4"
+            className="lg:col-span-6 glass-panel rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-white/10 shadow-xl space-y-4"
           >
             <div className="text-xs font-mono font-semibold text-accent-blue uppercase tracking-wider">
               Professional Overview
             </div>
-            <h3 className="text-2xl font-bold text-content-primaryDark dark:text-content-primaryDark light:text-slate-900">
+            <h3 className="text-2xl font-bold text-slate-900 dark:text-[#F5F7FA]">
               Vinod Kumar — React Native Engineer
             </h3>
-            <p className="text-sm sm:text-base text-content-secondaryDark dark:text-content-secondaryDark light:text-slate-600 leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-600 dark:text-[#A5ACB8] leading-relaxed">
               With <strong>3+ years of professional hands-on experience</strong> in mobile development, I specialize in crafting cross-platform applications for iOS and Android using React Native, Redux Toolkit, and native mobile bridges.
             </p>
-            <p className="text-sm sm:text-base text-content-secondaryDark dark:text-content-secondaryDark light:text-slate-600 leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-600 dark:text-[#A5ACB8] leading-relaxed">
               My engineering journey spans developing scalable applications across diverse verticals—including parking booking platforms, mental health & wellness apps, environmental reporting tools, and low-latency real-time video streaming solutions using WebRTC and Mediasoup.
             </p>
-            <p className="text-sm sm:text-base text-content-secondaryDark dark:text-content-secondaryDark light:text-slate-600 leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-600 dark:text-[#A5ACB8] leading-relaxed">
               I thrive on solving complex technical challenges: optimizing rendering lifecycles, establishing seamless API communications, integrating device hardware capabilities, and delivering polished, production-ready apps to millions of end users.
             </p>
           </motion.div>
@@ -82,15 +82,15 @@ export function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: idx * 0.08 }}
-                  className="p-5 rounded-xl bg-surface-dark dark:bg-surface-dark light:bg-white border border-border-dark dark:border-border-dark light:border-slate-200 hover:border-accent-blue/40 hover:shadow-glow-blue transition-all group"
+                  className="p-5 rounded-xl bg-white dark:bg-[#11151A] border border-slate-200 dark:border-white/10 hover:border-accent-blue/40 hover:shadow-glow-blue transition-all group"
                 >
                   <div className="w-10 h-10 rounded-lg bg-accent-blue/10 flex items-center justify-center text-accent-blue group-hover:bg-accent-blue group-hover:text-white transition-colors mb-3">
                     <IconComp className="w-5 h-5" />
                   </div>
-                  <h4 className="text-base font-bold text-content-primaryDark dark:text-content-primaryDark light:text-slate-900 group-hover:text-accent-blue transition-colors">
+                  <h4 className="text-base font-bold text-slate-900 dark:text-[#F5F7FA] group-hover:text-accent-blue transition-colors">
                     {item.title}
                   </h4>
-                  <p className="text-xs text-content-secondaryDark dark:text-content-secondaryDark light:text-slate-600 mt-1.5 leading-relaxed">
+                  <p className="text-xs text-slate-600 dark:text-[#A5ACB8] mt-1.5 leading-relaxed">
                     {item.description}
                   </p>
                 </motion.div>

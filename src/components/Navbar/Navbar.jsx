@@ -53,17 +53,17 @@ export function Navbar({ theme, toggleTheme }) {
             <Code2 className="w-5 h-5" />
           </div>
           <div className="flex flex-col">
-            <span className="font-extrabold text-base tracking-wider text-content-primaryDark dark:text-content-primaryDark light:text-slate-900 group-hover:text-accent-blue transition-colors">
+            <span className="font-extrabold text-base tracking-wider text-slate-900 dark:text-[#F5F7FA] group-hover:text-accent-blue transition-colors">
               VINOD KUMAR
             </span>
-            <span className="text-[10px] font-mono text-content-mutedDark tracking-tight -mt-0.5">
+            <span className="text-[10px] font-mono text-slate-500 dark:text-[#6F7785] tracking-tight -mt-0.5">
               React Native Developer
             </span>
           </div>
         </a>
 
         {/* Desktop Nav Links */}
-        <nav className="hidden md:flex items-center gap-1 glass-panel px-4 py-1.5 rounded-full border border-border-dark dark:border-border-dark light:border-slate-200">
+        <nav className="hidden md:flex items-center gap-1 glass-panel px-4 py-1.5 rounded-full border border-slate-200 dark:border-white/10">
           {navItems.map((item) => {
             const isActive = activeSection === item.id;
             return (
@@ -74,7 +74,7 @@ export function Navbar({ theme, toggleTheme }) {
                 className={`relative px-3.5 py-1.5 text-sm font-medium transition-all duration-200 rounded-full ${
                   isActive
                     ? 'text-white font-semibold'
-                    : 'text-content-secondaryDark dark:text-content-secondaryDark light:text-slate-600 hover:text-content-primaryDark'
+                    : 'text-slate-600 dark:text-[#A5ACB8] hover:text-slate-900 dark:hover:text-white'
                 }`}
               >
                 {isActive && (
@@ -107,7 +107,7 @@ export function Navbar({ theme, toggleTheme }) {
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle mobile menu"
-            className="p-2 rounded-xl text-content-primaryDark bg-surface-elevatedDark/80 border border-border-dark"
+            className="p-2 rounded-xl text-slate-800 dark:text-[#F5F7FA] bg-slate-100 dark:bg-[#171B21]/80 border border-slate-200 dark:border-white/10"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -116,7 +116,7 @@ export function Navbar({ theme, toggleTheme }) {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden glass-panel border-b border-border-dark px-4 pt-4 pb-6 mt-3 space-y-3 animate-fadeIn">
+        <div className="md:hidden glass-panel border-b border-slate-200 dark:border-white/10 px-4 pt-4 pb-6 mt-3 space-y-3 animate-fadeIn">
           <nav className="flex flex-col space-y-1">
             {navItems.map((item) => {
               const isActive = activeSection === item.id;
@@ -128,7 +128,7 @@ export function Navbar({ theme, toggleTheme }) {
                   className={`px-4 py-2.5 rounded-xl text-base font-medium transition-all ${
                     isActive
                       ? 'bg-accent-blue/15 text-accent-blue border border-accent-blue/30 font-semibold'
-                      : 'text-content-secondaryDark hover:bg-surface-elevatedDark hover:text-white'
+                      : 'text-slate-600 dark:text-[#A5ACB8] hover:bg-slate-100 dark:hover:bg-[#171B21] hover:text-slate-900 dark:hover:text-white'
                   }`}
                 >
                   {item.label}
@@ -136,7 +136,7 @@ export function Navbar({ theme, toggleTheme }) {
               );
             })}
           </nav>
-          <div className="pt-3 border-t border-border-dark flex flex-col gap-2">
+          <div className="pt-3 border-t border-slate-200 dark:border-white/10 flex flex-col gap-2">
             <Button
               href={socialLinks.resumePath}
               download="Vinod_Kumar_React_Native_Developer_Resume.pdf"

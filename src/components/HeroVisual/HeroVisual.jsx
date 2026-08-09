@@ -106,14 +106,14 @@ export function HeroVisual() {
       <motion.div
         animate={{ y: [0, -10, 0] }}
         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-        className="absolute -bottom-2 -left-2 sm:bottom-8 sm:left-2 p-3 rounded-2xl glass-panel border border-white/10 shadow-xl flex items-center gap-3 backdrop-blur-md"
+        className="absolute -bottom-2 -left-2 sm:bottom-8 sm:left-2 p-3 rounded-2xl glass-panel border border-slate-200 dark:border-white/10 shadow-xl flex items-center gap-3 backdrop-blur-md"
       >
         <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white text-lg shadow-sm">
           📱
         </div>
         <div>
-          <div className="text-xs font-bold text-white">Cross-Platform</div>
-          <div className="text-[10px] text-content-secondaryDark">iOS & Android Parity</div>
+          <div className="text-xs font-bold text-slate-900 dark:text-white">Cross-Platform</div>
+          <div className="text-[10px] text-slate-600 dark:text-[#A5ACB8]">iOS & Android Parity</div>
         </div>
       </motion.div>
 
@@ -121,14 +121,14 @@ export function HeroVisual() {
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-        className="absolute top-1/2 -right-4 sm:-right-6 transform -translate-y-1/2 p-3 rounded-2xl glass-panel border border-white/10 shadow-xl flex items-center gap-3 backdrop-blur-md"
+        className="absolute top-1/2 -right-4 sm:-right-6 transform -translate-y-1/2 p-3 rounded-2xl glass-panel border border-slate-200 dark:border-white/10 shadow-xl flex items-center gap-3 backdrop-blur-md"
       >
         <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center text-white text-lg shadow-sm">
           📡
         </div>
         <div>
-          <div className="text-xs font-bold text-white">WebRTC & Mediasoup</div>
-          <div className="text-[10px] text-accent-cyan font-mono">Real-Time Streams</div>
+          <div className="text-xs font-bold text-slate-900 dark:text-white">WebRTC & Mediasoup</div>
+          <div className="text-[10px] text-blue-600 dark:text-accent-cyan font-mono font-semibold">Real-Time Streams</div>
         </div>
       </motion.div>
     </div>

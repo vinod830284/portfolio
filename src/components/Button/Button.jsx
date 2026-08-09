@@ -19,11 +19,11 @@ export function Button({
     primary:
       'bg-gradient-to-r from-accent-blue to-accent-violet hover:from-blue-600 hover:to-violet-600 text-white shadow-glow-blue hover:shadow-glow-violet transform hover:-translate-y-0.5 active:translate-y-0',
     secondary:
-      'bg-surface-elevatedDark text-content-primaryDark hover:bg-surface-elevatedDark/80 border border-border-dark hover:border-border-darkHover dark:bg-surface-elevatedDark dark:text-content-primaryDark light:bg-slate-100 light:text-slate-900 light:hover:bg-slate-200 light:border-slate-200 transform hover:-translate-y-0.5 active:translate-y-0',
+      'bg-slate-100 dark:bg-[#171B21] text-slate-800 dark:text-[#F5F7FA] hover:bg-slate-200 dark:hover:bg-[#171B21]/80 border border-slate-300 dark:border-white/10 transform hover:-translate-y-0.5 active:translate-y-0',
     outline:
-      'bg-transparent border border-border-dark hover:border-accent-blue text-content-primaryDark dark:text-content-primaryDark light:text-slate-900 light:border-slate-300 light:hover:border-accent-blue hover:bg-accent-blue/10 transform hover:-translate-y-0.5 active:translate-y-0',
+      'bg-transparent border border-slate-300 dark:border-white/15 hover:border-accent-blue text-slate-800 dark:text-[#F5F7FA] hover:bg-accent-blue/10 transform hover:-translate-y-0.5 active:translate-y-0',
     ghost:
-      'bg-transparent text-content-secondaryDark hover:text-content-primaryDark hover:bg-surface-elevatedDark/50 dark:text-content-secondaryDark light:text-slate-600 light:hover:text-slate-900 light:hover:bg-slate-100',
+      'bg-transparent text-slate-600 dark:text-[#A5ACB8] hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-[#171B21]/50',
   };
 
   const sizes = {

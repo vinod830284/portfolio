@@ -34,13 +34,13 @@ export function Hero() {
             </div>
 
             {/* Main Hero Heading */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-content-primaryDark dark:text-content-primaryDark light:text-slate-900 leading-[1.15]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-[#F5F7FA] leading-[1.15]">
               Building reliable mobile experiences with{' '}
               <span className="gradient-text">React Native.</span>
             </h1>
 
             {/* Supporting Text */}
-            <p className="text-base sm:text-lg text-content-secondaryDark dark:text-content-secondaryDark light:text-slate-600 leading-relaxed max-w-2xl">
+            <p className="text-base sm:text-lg text-slate-600 dark:text-[#A5ACB8] leading-relaxed max-w-2xl">
               React Native Developer with <strong>3+ years of experience</strong> building and maintaining production-ready applications for iOS and Android across booking, wellness, healthcare, environmental reporting, and real-time communication domains.
             </p>
 
@@ -79,7 +79,7 @@ export function Hero() {
             </div>
 
             {/* Small Metadata Chips */}
-            <div className="pt-6 border-t border-border-dark dark:border-border-dark light:border-slate-200 flex flex-wrap items-center gap-2 sm:gap-3">
+            <div className="pt-6 border-t border-slate-200 dark:border-white/10 flex flex-wrap items-center gap-2 sm:gap-3">
               {metadataBadges.map((badge, idx) => {
                 const IconComponent = badge.icon;
                 return (
@@ -87,11 +87,11 @@ export function Hero() {
                     key={idx}
                     className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-mono font-medium transition-all ${
                       badge.highlight
-                        ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20'
-                        : 'bg-surface-elevatedDark/60 dark:bg-surface-elevatedDark/60 light:bg-slate-100 text-content-secondaryDark dark:text-content-secondaryDark light:text-slate-700 border border-border-dark dark:border-border-dark light:border-slate-200'
+                        ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20'
+                        : 'bg-slate-100 dark:bg-[#171B21]/60 text-slate-700 dark:text-[#A5ACB8] border border-slate-200 dark:border-white/10'
                     }`}
                   >
-                    <IconComponent className={`w-3.5 h-3.5 ${badge.highlight ? 'text-emerald-400' : 'text-accent-blue'}`} />
+                    <IconComponent className={`w-3.5 h-3.5 ${badge.highlight ? 'text-emerald-500' : 'text-accent-blue'}`} />
                     <span>{badge.text}</span>
                   </div>
                 );
