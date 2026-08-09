@@ -1,3 +1,5 @@
+import resumePdf from '../assets/Vinod_Kumar_React_Native_Developer_Resume.pdf';
+
 export const socialLinks = {
   name: "Vinod Kumar",
   title: "React Native Developer",
@@ -6,5 +8,5 @@ export const socialLinks = {
   location: "Kurukshetra, Haryana, India",
   linkedin: "https://www.linkedin.com/in/vinodkumar830284",
   github: "https://github.com/vinod830284",
-  resumePath: `${import.meta.env.BASE_URL}Vinod_Kumar_React_Native_Developer_Resume.pdf`
+  resumePath: resumePdf
 };

@@ -43,12 +43,13 @@ export function Button({
   const combinedClasses = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className} group`;
 
   if (href) {
+    const isDownload = Boolean(download);
     return (
       <a
         href={href}
         download={download}
-        target={target}
-        rel={rel || (target === '_blank' ? 'noopener noreferrer' : undefined)}
+        target={isDownload ? undefined : target}
+        rel={rel || (!isDownload && target === '_blank' ? 'noopener noreferrer' : undefined)}
         className={combinedClasses}
         {...props}
       >
