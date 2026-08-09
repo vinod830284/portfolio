@@ -35,7 +35,7 @@ export function Hero() {
 
             {/* Main Hero Heading */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-[#F5F7FA] leading-[1.15]">
-              Building reliable mobile experiences with{' '}
+              Building reliable with{' '}
               <span className="gradient-text">React Native.</span>
             </h1>
 
@@ -85,11 +85,10 @@ export function Hero() {
                 return (
                   <div
                     key={idx}
-                    className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-mono font-medium transition-all ${
-                      badge.highlight
-                        ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20'
-                        : 'bg-slate-100 dark:bg-[#171B21]/60 text-slate-700 dark:text-[#A5ACB8] border border-slate-200 dark:border-white/10'
-                    }`}
+                    className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-mono font-medium transition-all ${badge.highlight
+                      ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20'
+                      : 'bg-slate-100 dark:bg-[#171B21]/60 text-slate-700 dark:text-[#A5ACB8] border border-slate-200 dark:border-white/10'
+                      }`}
                   >
                     <IconComponent className={`w-3.5 h-3.5 ${badge.highlight ? 'text-emerald-500' : 'text-accent-blue'}`} />
                     <span>{badge.text}</span>
