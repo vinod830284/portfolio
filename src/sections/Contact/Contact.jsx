@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github, Phone, MapPin, Copy, Download, Send } from 'lucide-react';
+import { Mail, Linkedin, Github, Phone, MapPin, Copy, FileText, Send } from 'lucide-react';
 import { Button } from '../../components/Button/Button';
 import { Toast } from '../../components/Toast/Toast';
 import { socialLinks } from '../../data/socialLinks';
@@ -133,17 +133,17 @@ export function Contact() {
             </div>
           </div>
 
-          {/* Bottom Resume Download Button */}
+          {/* Bottom Resume Link Button */}
           <div className="mt-8 text-center pt-6 border-t border-slate-200 dark:border-white/10">
             <Button
               href={socialLinks.resumePath}
-              download="Vinod_Kumar_React_Native_Developer_Resume.pdf"
               target="_blank"
+              rel="noopener noreferrer"
               variant="outline"
               size="lg"
-              icon={Download}
+              icon={FileText}
             >
-              Download Verified Resume (PDF)
+              View Official CV (Google Docs)
             </Button>
           </div>
         </div>

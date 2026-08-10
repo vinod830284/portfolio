@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Download, Code2 } from 'lucide-react';
+import { Menu, X, FileText, Code2 } from 'lucide-react';
 import { Button } from '../Button/Button';
 import { ThemeToggle } from '../ThemeToggle/ThemeToggle';
 import { socialLinks } from '../../data/socialLinks';
@@ -14,7 +14,7 @@ const navItems = [
   { label: 'Contact', href: '#contact', id: 'contact' },
 ];
 
-export function Navbar({ theme, toggleTheme }) {
+export function Navbar({ theme, toggleTheme, onOpenCmdPalette }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const activeSection = useScrollSpy(navItems.map((item) => item.id), 120);
@@ -86,18 +86,26 @@ export function Navbar({ theme, toggleTheme }) {
           })}
         </nav>
 
-        {/* Right Action Items: Download Resume & Theme Toggle */}
-        <div className="hidden md:flex items-center gap-3">
+        {/* Right Action Items: Command Palette, Theme Toggle, View Resume */}
+        <div className="hidden md:flex items-center gap-2.5">
+          <button
+            onClick={onOpenCmdPalette}
+            title="Press Cmd+K to open Quick Search"
+            className="px-2.5 py-1.5 rounded-xl text-xs font-mono bg-slate-100 dark:bg-[#171B21] text-slate-600 dark:text-[#A5ACB8] border border-slate-200 dark:border-white/10 hover:border-accent-blue/40 hover:text-accent-blue transition-all flex items-center gap-1.5 cursor-pointer"
+          >
+            <span>⌘K</span>
+            <span className="text-[10px] text-slate-400">Search</span>
+          </button>
           <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
           <Button
             href={socialLinks.resumePath}
-            download="Vinod_Kumar_React_Native_Developer_Resume.pdf"
             target="_blank"
+            rel="noopener noreferrer"
             variant="primary"
             size="sm"
-            icon={Download}
+            icon={FileText}
           >
-            Download Resume
+            View Resume
           </Button>
         </div>
 
@@ -139,14 +147,14 @@ export function Navbar({ theme, toggleTheme }) {
           <div className="pt-3 border-t border-slate-200 dark:border-white/10 flex flex-col gap-2">
             <Button
               href={socialLinks.resumePath}
-              download="Vinod_Kumar_React_Native_Developer_Resume.pdf"
               target="_blank"
+              rel="noopener noreferrer"
               variant="primary"
               size="md"
-              icon={Download}
+              icon={FileText}
               className="w-full"
             >
-              Download Resume
+              View Resume
             </Button>
           </div>
         </div>

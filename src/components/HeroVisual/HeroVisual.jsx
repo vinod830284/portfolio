@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 export function HeroVisual() {
+  const [activeTab, setActiveTab] = useState('call'); // 'call' | 'map' | 'hermes'
+
   return (
     <div className="relative w-full max-w-lg mx-auto aspect-square flex items-center justify-center p-4">
       {/* Background Radial Glow */}
@@ -11,10 +14,10 @@ export function HeroVisual() {
         initial={{ opacity: 0, scale: 0.9, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
-        className="relative w-64 sm:w-72 h-[480px] rounded-[40px] p-3 glass-panel border border-white/10 shadow-2xl shadow-accent-blue/10 flex flex-col justify-between overflow-hidden"
+        className="relative w-64 sm:w-72 h-[490px] rounded-[40px] p-3 glass-panel border border-slate-300 dark:border-white/10 shadow-2xl shadow-accent-blue/10 flex flex-col justify-between overflow-hidden"
       >
         {/* Phone Notch & Ear Speaker */}
-        <div className="flex justify-center items-center gap-2 pt-1 pb-3">
+        <div className="flex justify-center items-center gap-2 pt-1 pb-2">
           <div className="w-16 h-4 bg-black/50 rounded-full flex items-center justify-center gap-2 px-2">
             <div className="w-2 h-2 rounded-full bg-accent-blue/80 animate-pulse" />
             <div className="w-6 h-1 rounded-full bg-white/20" />
@@ -22,68 +25,146 @@ export function HeroVisual() {
         </div>
 
         {/* Mock App Screen Interface */}
-        <div className="flex-1 rounded-[28px] bg-bg-dark/90 p-4 border border-white/5 flex flex-col justify-between relative overflow-hidden">
-          {/* Top App Header */}
-          <div className="flex items-center justify-between pb-3 border-b border-white/10">
-            <div className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-accent-blue to-accent-violet flex items-center justify-center font-bold text-xs text-white shadow-sm">
-                RN
-              </div>
-              <div>
-                <div className="text-xs font-semibold text-white">EvalPulse.app</div>
-                <div className="text-[10px] text-accent-cyan flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
-                  WebRTC Connected
+        <div className="flex-1 rounded-[28px] bg-slate-900 dark:bg-[#0B0D10] p-3.5 border border-white/10 flex flex-col justify-between relative overflow-hidden text-left">
+          {/* Top App Header & Interactive Mode Tabs */}
+          <div className="pb-2.5 border-b border-white/10 space-y-2">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <div className="w-6 h-6 rounded-md bg-gradient-to-br from-accent-blue to-accent-violet flex items-center justify-center font-bold text-[10px] text-white shadow-sm">
+                  RN
+                </div>
+                <div>
+                  <div className="text-xs font-semibold text-white">React Native Demo</div>
+                  <div className="text-[9px] text-accent-cyan flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
+                    iOS & Android
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="px-2 py-0.5 rounded text-[10px] font-mono bg-accent-violet/20 text-accent-violet border border-accent-violet/30">
-              Hermes 0.73
-            </div>
-          </div>
-
-          {/* WebRTC Video Stream Grid Mock */}
-          <div className="grid grid-cols-2 gap-2 my-3">
-            <div className="relative aspect-video rounded-xl bg-surface-elevatedDark/80 border border-white/10 overflow-hidden flex items-center justify-center group">
-              <div className="absolute inset-0 bg-gradient-to-tr from-accent-blue/30 to-transparent" />
-              <div className="w-8 h-8 rounded-full bg-accent-blue/20 border border-accent-blue/50 flex items-center justify-center">
-                <span className="text-[10px] font-mono font-bold text-accent-blue">iOS</span>
+              <div className="px-1.5 py-0.5 rounded text-[9px] font-mono bg-accent-violet/20 text-accent-violet border border-accent-violet/30">
+                Hermes 0.73
               </div>
-              <div className="absolute bottom-1 left-2 text-[9px] font-mono text-white/80">60 FPS • 1080p</div>
             </div>
 
-            <div className="relative aspect-video rounded-xl bg-surface-elevatedDark/80 border border-white/10 overflow-hidden flex items-center justify-center">
-              <div className="absolute inset-0 bg-gradient-to-bl from-accent-violet/30 to-transparent" />
-              <div className="w-8 h-8 rounded-full bg-accent-violet/20 border border-accent-violet/50 flex items-center justify-center">
-                <span className="text-[10px] font-mono font-bold text-accent-violet">Android</span>
+            {/* Interactive Screen Tabs */}
+            <div className="grid grid-cols-3 gap-1 bg-white/5 p-1 rounded-lg">
+              <button
+                onClick={() => setActiveTab('call')}
+                className={`py-1 text-[10px] font-mono rounded font-medium transition-all ${
+                  activeTab === 'call' ? 'bg-accent-blue text-white shadow-sm' : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                WebRTC
+              </button>
+              <button
+                onClick={() => setActiveTab('map')}
+                className={`py-1 text-[10px] font-mono rounded font-medium transition-all ${
+                  activeTab === 'map' ? 'bg-accent-blue text-white shadow-sm' : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                GIS Map
+              </button>
+              <button
+                onClick={() => setActiveTab('hermes')}
+                className={`py-1 text-[10px] font-mono rounded font-medium transition-all ${
+                  activeTab === 'hermes' ? 'bg-accent-blue text-white shadow-sm' : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                Engine
+              </button>
+            </div>
+          </div>
+
+          {/* Screen Content 1: WebRTC */}
+          {activeTab === 'call' && (
+            <div className="space-y-2.5 py-2">
+              <div className="grid grid-cols-2 gap-2">
+                <div className="relative aspect-video rounded-xl bg-slate-800 border border-white/10 overflow-hidden flex items-center justify-center">
+                  <div className="absolute inset-0 bg-gradient-to-tr from-accent-blue/30 to-transparent" />
+                  <span className="text-[10px] font-mono font-bold text-accent-blue z-10">iOS Host</span>
+                  <div className="absolute bottom-1 left-1.5 text-[8px] font-mono text-white/80">60 FPS • 1080p</div>
+                </div>
+                <div className="relative aspect-video rounded-xl bg-slate-800 border border-white/10 overflow-hidden flex items-center justify-center">
+                  <div className="absolute inset-0 bg-gradient-to-bl from-accent-violet/30 to-transparent" />
+                  <span className="text-[10px] font-mono font-bold text-accent-violet z-10">Android Peer</span>
+                  <div className="absolute bottom-1 left-1.5 text-[8px] font-mono text-white/80">Mediasoup</div>
+                </div>
               </div>
-              <div className="absolute bottom-1 left-2 text-[9px] font-mono text-white/80">Mediasoup</div>
-            </div>
-          </div>
 
-          {/* Mock Code Snippet */}
-          <div className="p-3 rounded-xl bg-black/60 border border-white/10 font-mono text-[10px] space-y-1 text-slate-300">
-            <div className="text-accent-violet font-semibold">{"// Redux Toolkit + WebRTC"}</div>
-            <div><span className="text-accent-blue">const</span> peer = <span className="text-emerald-400">new</span> RTCPeerConnection();</div>
-            <div>dispatch(<span className="text-amber-300">setMediaStream</span>(peer));</div>
-          </div>
+              {/* Code Snippet */}
+              <div className="p-2.5 rounded-xl bg-black/70 border border-white/10 font-mono text-[9px] space-y-1 text-slate-300">
+                <div className="text-accent-violet font-semibold">{"// WebRTC PeerConnection"}</div>
+                <div><span className="text-accent-blue">const</span> peer = <span className="text-emerald-400">new</span> RTCPeerConnection();</div>
+                <div>dispatch(<span className="text-amber-300">setStream</span>(peer));</div>
+              </div>
+            </div>
+          )}
+
+          {/* Screen Content 2: GIS Map */}
+          {activeTab === 'map' && (
+            <div className="space-y-2 py-2">
+              <div className="relative h-28 rounded-xl bg-slate-800 border border-white/10 overflow-hidden p-2 flex flex-col justify-between">
+                <div className="absolute inset-0 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:12px_12px] opacity-20" />
+                <div className="flex items-center justify-between text-[9px] font-mono text-emerald-400 z-10">
+                  <span>GPS Active</span>
+                  <span>29.9695° N, 76.8783° E</span>
+                </div>
+                <div className="flex justify-center z-10">
+                  <div className="w-6 h-6 rounded-full bg-accent-blue/30 border border-accent-blue flex items-center justify-center animate-bounce">
+                    <span className="w-2 h-2 rounded-full bg-accent-blue" />
+                  </div>
+                </div>
+                <div className="text-[9px] font-mono text-slate-300 z-10">Environmental Field Report</div>
+              </div>
+              <div className="p-2 rounded-xl bg-black/70 border border-white/10 font-mono text-[9px] text-slate-300">
+                Observation Sync: <span className="text-emerald-400 font-bold">Verified</span>
+              </div>
+            </div>
+          )}
+
+          {/* Screen Content 3: Hermes Runtime */}
+          {activeTab === 'hermes' && (
+            <div className="space-y-2 py-2">
+              <div className="p-2.5 rounded-xl bg-slate-800/90 border border-white/10 space-y-2 font-mono text-[9px]">
+                <div className="flex justify-between text-slate-300">
+                  <span>Engine:</span>
+                  <span className="text-accent-blue font-bold">Hermes Bytecode</span>
+                </div>
+                <div className="flex justify-between text-slate-300">
+                  <span>Heap Memory:</span>
+                  <span className="text-emerald-400 font-bold">14.2 MB</span>
+                </div>
+                <div className="flex justify-between text-slate-300">
+                  <span>UI Thread:</span>
+                  <span className="text-accent-cyan font-bold">60.0 FPS</span>
+                </div>
+                <div className="flex justify-between text-slate-300">
+                  <span>JS Thread:</span>
+                  <span className="text-accent-violet font-bold">59.8 FPS</span>
+                </div>
+              </div>
+              <div className="p-2 rounded-xl bg-black/70 border border-white/10 font-mono text-[9px] text-slate-300">
+                Bridge Latency: <span className="text-emerald-400 font-bold">&lt; 2ms</span>
+              </div>
+            </div>
+          )}
 
           {/* Native Action Controls */}
-          <div className="flex items-center justify-around pt-3 border-t border-white/10">
-            <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center border border-white/10 text-white text-xs">
+          <div className="flex items-center justify-around pt-2 border-t border-white/10">
+            <div className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center border border-white/10 text-white text-[10px]">
               🎙️
             </div>
-            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-red-500 to-rose-600 flex items-center justify-center text-white text-sm shadow-md">
+            <div className="w-9 h-9 rounded-full bg-gradient-to-r from-red-500 to-rose-600 flex items-center justify-center text-white text-xs shadow-md">
               📞
             </div>
-            <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center border border-white/10 text-white text-xs">
+            <div className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center border border-white/10 text-white text-[10px]">
               📹
             </div>
           </div>
         </div>
 
         {/* Bottom Phone Bar */}
-        <div className="flex justify-center pt-2 pb-1">
+        <div className="flex justify-center pt-2 pb-0.5">
           <div className="w-24 h-1 bg-white/20 rounded-full" />
         </div>
       </motion.div>

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowDownRight, Download, Send, CheckCircle2, Smartphone, ShieldCheck, Cpu } from 'lucide-react';
+import { ArrowDownRight, FileText, Send, CheckCircle2, Smartphone, ShieldCheck, Cpu } from 'lucide-react';
 import { Button } from '../../components/Button/Button';
 import { HeroVisual } from '../../components/HeroVisual/HeroVisual';
 import { socialLinks } from '../../data/socialLinks';
@@ -58,13 +58,13 @@ export function Hero() {
 
               <Button
                 href={socialLinks.resumePath}
-                download="Vinod_Kumar_React_Native_Developer_Resume.pdf"
                 target="_blank"
+                rel="noopener noreferrer"
                 variant="secondary"
                 size="lg"
-                icon={Download}
+                icon={FileText}
               >
-                Download Resume
+                View Resume
               </Button>
 
               <Button
