@@ -72,14 +72,14 @@ export function Contact() {
                 href={socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 rounded-xl bg-white dark:bg-[#11151A]/60 border border-slate-200 dark:border-white/10 hover:border-accent-blue/40 hover:bg-slate-50 dark:hover:bg-[#171B21] transition-all flex items-center gap-3 group"
+                className="p-4 rounded-xl bg-white dark:bg-[#11151A]/60 border border-slate-200 dark:border-white/10 hover:border-accent-blue/40 hover:bg-slate-50 dark:hover:bg-[#171B21] transition-all flex items-center gap-3 group min-w-0"
               >
-                <div className="w-9 h-9 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-500 dark:text-blue-400 group-hover:scale-110 transition-transform">
+                <div className="w-9 h-9 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-500 dark:text-blue-400 group-hover:scale-110 transition-transform shrink-0">
                   <Linkedin className="w-5 h-5" />
                 </div>
-                <div className="text-left">
+                <div className="text-left min-w-0 flex-1">
                   <div className="text-xs font-mono text-slate-500 dark:text-[#6F7785]">LinkedIn</div>
-                  <div className="text-xs font-semibold text-slate-900 dark:text-[#F5F7FA] group-hover:text-accent-blue transition-colors">
+                  <div className="text-xs font-semibold text-slate-900 dark:text-[#F5F7FA] group-hover:text-accent-blue transition-colors truncate" title="in/vinodkumar830284">
                     in/vinodkumar830284
                   </div>
                 </div>
@@ -91,15 +91,15 @@ export function Contact() {
                 href={socialLinks.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 rounded-xl bg-white dark:bg-[#11151A]/60 border border-slate-200 dark:border-white/10 hover:border-accent-blue/40 hover:bg-slate-50 dark:hover:bg-[#171B21] transition-all flex items-center gap-3 group"
+                className="p-4 rounded-xl bg-white dark:bg-[#11151A]/60 border border-slate-200 dark:border-white/10 hover:border-accent-blue/40 hover:bg-slate-50 dark:hover:bg-[#171B21] transition-all flex items-center gap-3 group min-w-0"
               >
-                <div className="w-9 h-9 rounded-lg bg-slate-500/10 flex items-center justify-center text-slate-800 dark:text-[#F5F7FA] group-hover:scale-110 transition-transform">
+                <div className="w-9 h-9 rounded-lg bg-slate-500/10 flex items-center justify-center text-slate-800 dark:text-[#F5F7FA] group-hover:scale-110 transition-transform shrink-0">
                   <Github className="w-5 h-5" />
                 </div>
-                <div className="text-left">
+                <div className="text-left min-w-0 flex-1">
                   <div className="text-xs font-mono text-slate-500 dark:text-[#6F7785]">GitHub</div>
-                  <div className="text-xs font-semibold text-slate-900 dark:text-[#F5F7FA] group-hover:text-accent-blue transition-colors">
-                    github.com/vinod830284
+                  <div className="text-xs font-semibold text-slate-900 dark:text-[#F5F7FA] group-hover:text-accent-blue transition-colors truncate" title="vinod830284">
+                    vinod830284
                   </div>
                 </div>
               </a>
@@ -107,26 +107,26 @@ export function Contact() {
 
             <a
               href={`tel:${socialLinks.phone}`}
-              className="p-4 rounded-xl bg-white dark:bg-[#11151A]/60 border border-slate-200 dark:border-white/10 hover:border-accent-blue/40 hover:bg-slate-50 dark:hover:bg-[#171B21] transition-all flex items-center gap-3 group"
+              className="p-4 rounded-xl bg-white dark:bg-[#11151A]/60 border border-slate-200 dark:border-white/10 hover:border-accent-blue/40 hover:bg-slate-50 dark:hover:bg-[#171B21] transition-all flex items-center gap-3 group min-w-0"
             >
-              <div className="w-9 h-9 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform">
+              <div className="w-9 h-9 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform shrink-0">
                 <Phone className="w-5 h-5" />
               </div>
-              <div className="text-left">
+              <div className="text-left min-w-0 flex-1">
                 <div className="text-xs font-mono text-slate-500 dark:text-[#6F7785]">Phone</div>
-                <div className="text-xs font-semibold text-slate-900 dark:text-[#F5F7FA] group-hover:text-accent-blue transition-colors">
+                <div className="text-xs font-semibold text-slate-900 dark:text-[#F5F7FA] group-hover:text-accent-blue transition-colors truncate" title={socialLinks.phone}>
                   {socialLinks.phone}
                 </div>
               </div>
             </a>
 
-            <div className="p-4 rounded-xl bg-white dark:bg-[#11151A]/60 border border-slate-200 dark:border-white/10 flex items-center gap-3">
-              <div className="w-9 h-9 rounded-lg bg-violet-500/10 flex items-center justify-center text-accent-violet">
+            <div className="p-4 rounded-xl bg-white dark:bg-[#11151A]/60 border border-slate-200 dark:border-white/10 flex items-center gap-3 min-w-0">
+              <div className="w-9 h-9 rounded-lg bg-violet-500/10 flex items-center justify-center text-accent-violet shrink-0">
                 <MapPin className="w-5 h-5" />
               </div>
-              <div className="text-left">
+              <div className="text-left min-w-0 flex-1">
                 <div className="text-xs font-mono text-slate-500 dark:text-[#6F7785]">Location</div>
-                <div className="text-xs font-semibold text-slate-900 dark:text-[#F5F7FA]">
+                <div className="text-xs font-semibold text-slate-900 dark:text-[#F5F7FA] truncate" title={socialLinks.location}>
                   {socialLinks.location}
                 </div>
               </div>
