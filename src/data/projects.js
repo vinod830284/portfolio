@@ -1,7 +1,7 @@
 export const projectsData = [
   {
-    id: "eval-pulse",
-    title: "Eval Pulse — Real-Time Communication",
+    id: "real-time-communication",
+    title: "Real-Time Communication",
     domain: "Real-Time Communication",
     featured: true,
     techStack: ["React Native", "WebRTC", "Mediasoup"],
@@ -21,9 +21,9 @@ export const projectsData = [
     ]
   },
   {
-    id: "parking-rental",
-    title: "Parking Spot Rental & Booking",
-    domain: "Smart Mobility & Booking",
+    id: "parking-booking",
+    title: "Parking & Booking",
+    domain: "Parking & Booking",
     featured: false,
     techStack: ["React Native", "Redux Toolkit", "REST APIs"],
     shortDescription: "Developed listing, search, booking, role switching, authentication, payment integration, and availability validation.",
@@ -42,8 +42,8 @@ export const projectsData = [
     ]
   },
   {
-    id: "mental-health-wellness",
-    title: "Mental Health & Wellness App",
+    id: "healthcare-wellness",
+    title: "Healthcare & Wellness",
     domain: "Healthcare & Wellness",
     featured: false,
     techStack: ["React Native", "TypeScript", "REST APIs"],
@@ -63,8 +63,8 @@ export const projectsData = [
     ]
   },
   {
-    id: "ocean-wise",
-    title: "Ocean Wise — Environmental Reporting",
+    id: "environmental-reporting",
+    title: "Environmental Reporting",
     domain: "Environmental Reporting",
     featured: false,
     techStack: ["React Native", "Jest"],
@@ -83,9 +83,9 @@ export const projectsData = [
     ]
   },
   {
-    id: "studio-booking",
-    title: "Studio Booking Platform",
-    domain: "Operations & Booking",
+    id: "fitness-studios",
+    title: "Fitness Studios",
+    domain: "Fitness Studios",
     featured: false,
     techStack: ["React Native", "Redux Toolkit", "i18n"],
     shortDescription: "Developed booking, attendance, reporting, reusable UI components, and localization features.",
